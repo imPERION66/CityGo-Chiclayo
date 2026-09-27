@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">City Go</string>
+    <string name="nombre_app">City Go</string>
+    <string name="version">Version 1.0</string>
+    <string name="desarrollador">Desarrollado por NortCodeDev </string>
+
+    <!-- LOGIN -->
+    <string name="login">Iniciar Sesión</string>
+    <string name="usuario">Usuario</string>
+    <string name="clave">Clave</string>
+    <string name="olvidaste_contrasena">Olvidaste tu Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="no_cuenta">No tienes cuenta?, Registrate Aquí</string>
+
+    <!-- REGISTRO -->
+    <string name="titulo_registro">Registro de Usuario</string>
+    <string name="ingrese_datos">Ingrese Datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="ingrese_nombre">Ingrese Nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="ingrese_apellidos">Ingrese Apellidos</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="ingrese_correo">Ingrese Correo Electronico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingrese_contrasena">Ingrese Contraseña</string>
+    <string name="registrar">Registrar</string>
+    <string name="ir_login">Ir a Login</string>
+
+    <!-- LOGIN -->
+    <!-- LOGIN -->
+
+</resources>

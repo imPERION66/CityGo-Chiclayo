@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra de arrastre superior -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_pill_button"
+            android:backgroundTint="@color/text_muted" />
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📢 Reportar Punto Crítico"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Notifica a la central municipal de Chiclayo con foto y ubicación exacta"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <!-- Selector de Pestañas: Crear Reporte / Mis Reportes Anteriores -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutReportar"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_location_bar"
+            app:tabIndicatorColor="@color/green_primary"
+            app:tabSelectedTextColor="@color/green_primary"
+            app:tabTextColor="@color/text_secondary">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo Reporte" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Reportes Anteriores" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- SECCIÓN 1: FORMULARIO DE NUEVO REPORTE -->
+        <LinearLayout
+            android:id="@+id/layoutFormularioReporte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
+
+            <!-- Tipo de Incidente -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Incidente"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoIncidente"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_location_bar"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <!-- Ubicación y Geolocalización Automática -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Ubicación del incidente"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etDireccionReporte"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_location_bar"
+                    android:hint="Ej. Av. Balta con Elías Aguirre"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAutoGeolocalizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/green_light"
+                    android:text="GPS Auto"
+                    android:textColor="@color/green_dark"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_location_pin"
+                    app:iconTint="@color/green_primary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCoordenadasReporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Coordenadas: -6.7714, -79.8409"
+                android:textColor="@color/text_muted"
+                android:textSize="11sp" />
+
+            <!-- Descripción -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Descripción detallada"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etDescripcionReporte"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_location_bar"
+                android:gravity="top|start"
+                android:hint="Describe la cantidad y situación de los residuos acumulados..."
+                android:padding="12dp"
+                android:textSize="13sp" />
+
+            <!-- Evidencia Fotográfica / Video -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Evidencia Fotográfica (Supabase Storage)"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSeleccionarCamara"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/bento_cream_bg"
+                    android:text="Cámara"
+                    android:textColor="@color/orange_dark"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSeleccionarGaleria"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/bento_blue_bg"
+                    android:text="Galería"
+                    android:textColor="@color/bento_blue_accent"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivPreviewFotoReporte"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_promo_banner"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!-- Botón Enviar Reporte -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnviarReporteFinal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/green_primary"
+                android:text="Registrar Reporte Ciudadano"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+        </LinearLayout>
+
+        <!-- SECCIÓN 2: HISTORIAL DE MIS REPORTES ANTERIORES -->
+        <LinearLayout
+            android:id="@+id/layoutHistorialReportes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvVacioReportes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="No tienes reportes anteriores."
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMisReportesAnteriores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

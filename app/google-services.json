@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876597260348",
+    "project_id": "gestorapp-citygo",
+    "storage_bucket": "gestorapp-citygo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876597260348:android:d2339132c3812f52691339",
+        "android_client_info": {
+          "package_name": "com.greencix.citygo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbPTKAigj1tpMS22WG8FPv7y5dEkzmpxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

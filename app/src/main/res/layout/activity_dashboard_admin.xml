@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    tools:context=".ui.admin.DashboardAdminActivity">
+
+    <!-- Contenedor Modular para Fragmentos de Administrador -->
+    <FrameLayout
+        android:id="@+id/fragment_container_admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="68dp" />
+
+    <!-- Bottom Navigation Bar Administrador (Tema Escarlata / Vino Institucional) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:elevation="12dp"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/wine_primary"
+        app:itemRippleColor="@color/wine_light"
+        app:itemTextColor="@color/text_primary"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_bottom_nav_admin" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

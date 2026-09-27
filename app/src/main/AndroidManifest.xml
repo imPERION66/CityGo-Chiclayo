@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos de red y ubicación para CityGo -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".CityGoApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CityGo">
+
+        <!-- Pantallas de Flujo de Autenticación y Registro -->
+        <activity
+            android:name=".ValidacionCodigo"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionRol"
+            android:exported="false" />
+        <activity
+            android:name=".TerminosUso"
+            android:exported="false" />
+
+        <!-- Dashboards según los 3 roles -->
+        <activity
+            android:name=".ui.ciudadano.DashboardCiudadanoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.colaborador.DashboardColaboradorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.DashboardAdminActivity"
+            android:exported="false" />
+
+        <!-- Splash Screen (Launcher) -->
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Pantalla de Login (MainActivity) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

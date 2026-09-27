@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grnregitro"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".ValidacionCodigo">
+
+    <TextView
+        android:id="@+id/tvTituloValidacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Activación de Cuenta"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieValidacion"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="15dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="administrao.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/tvInstruccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Usted ha seleccionado un perfil privado.\nIngrese el código de autorización otorgado por la organización City Go."
+        android:textSize="14sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCodigoActivacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <EditText
+            android:id="@+id/etCodigoActivacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Código de Activación"
+            android:inputType="textCapCharacters"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:letterSpacing="0.2"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarValidacion"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnValidarCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/green"
+        android:text="VERIFICAR Y ACTIVAR"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvErrorCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="¿No tienes un código? Contacta a soporte@citygo.pe"
+        android:textColor="#E91E63"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+</LinearLayout>

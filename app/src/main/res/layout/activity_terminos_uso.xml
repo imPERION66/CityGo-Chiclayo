@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grnregitro"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".TerminosUso">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Términos y Condiciones de Uso"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="Contrato de Aceptación Obligatoria - City Go"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+    <!-- Contenedor con Scroll para lectura legal completa -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_white"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CLÁUSULA C1: NATURALEZA DEL SERVICIO"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="City Go es una aplicación tecnológica destinada a la gestión y tratamiento de residuos urbanos. El usuario reconoce que la aplicación actúa como un canal de comunicación y educación, y no sustituye las responsabilidades legales de las autoridades municipales competentes."
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CLÁUSULA C2: OBLIGACIONES DEL USUARIO"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Todo usuario se compromete a: \n1. Proporcionar información veraz en el registro de datos.\n2. Realizar reportes de incidentes basados en hechos reales y comprobables.\n3. Mantener un lenguaje respetuoso en toda interacción.\n4. No suplantar la identidad de funcionarios o terceros."
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CLÁUSULA C3: RÉGIMEN DISCIPLINARIO Y SANCIONES"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:lineSpacingExtra="3dp"
+                android:text="El incumplimiento de las normas establecidas facultará a la administración de City Go para aplicar las siguientes medidas decorosas a la gravedad de la falta:"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:text="a) INFRACCIÓN LEVE: Amonestación escrita digital por mal uso de herramientas educativas o errores menores en reportes. \n\nb) INFRACCIÓN GRAVE: Inhabilitación temporal del acceso a la cuenta por un periodo de entre 3 a 15 días calendario. Aplica por reincidencia o reportes deliberadamente inexactos.\n\nc) INFRACCIÓN CRÍTICA: Suspensión Definitiva e irrevocable de la cuenta. Aplica por fraude sistémico, uso de lenguaje de odio, sabotaje de datos o suplantación de credenciales de administrador/colaborador."
+                android:textSize="13sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="CLÁUSULA C4: PROPIEDAD INTELECTUAL"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="3dp"
+                android:text="El diseño, códigos, logotipos y contenido educativo son propiedad exclusiva de los desarrolladores de City Go. En ningún caso el Usuario podrá alterar de forma alguna la aplicación. Queda prohibida la reproducción total o parcial sin autorización expresa."
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CLÁUSULA C5: LÍMITE DE RESPONSABILIDAD"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Los administradores de la App no se hacen responsables por retrasos en los servicios de recolección municipales ni por el mal uso de la información por parte de terceros una vez publicada en áreas comunes de la plataforma."
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Sección de Consentimiento -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <CheckBox
+            android:id="@+id/checkAceptarTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/green"
+            android:text="He leído, comprendido y acepto las cláusulas legales."
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnFinalizarRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/green"
+            android:text="ACEPTAR Y FINALIZAR"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
